@@ -1,0 +1,68 @@
+/* Assuming default values for theme properties; you'll need to adjust these based on your actual theme */
+:root {
+    /* Define your theme's specific values here */
+    --border-radius: 4px; /* Example, replace with your theme's value */
+    --common-white-opacity-15: rgba(255, 255, 255, 0.15); /* Adjust based on your theme */
+    --common-white-opacity-25: rgba(255, 255, 255, 0.25); /* Adjust based on your theme */
+    --spacing-unit: 8px; /* Example, replace with your theme's spacing unit */
+}
+
+.title {
+    display: none;
+}
+
+/* Replace 'sm' with the actual min-width value from your theme's breakpoints */
+@media (min-width: 600px) {
+    .title {
+        display: block;
+    }
+}
+
+.search {
+    position: relative;
+    border-radius: var(--border-radius);
+    background-color: var(--common-white-opacity-15);
+  
+}
+
+.search:hover {
+    background-color: var(--common-white-opacity-25);
+}
+
+.searchIcon {
+    padding: var(--spacing-unit) var(--spacing-unit * 2);
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputRoot {
+    color: inherit;
+    padding: auto;
+}
+.subTitle {
+  margin-right: 16px; /* Adjust as needed for spacing between text and input */
+}
+.inputInput {
+  padding:  8px 8px 8px 48px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+.Box{
+  display: flex;
+  gap: 10px;
+}
+
+/* For breakpoints and dynamic width in .inputInput */
+/* You'll need to adjust these media queries according to your theme's breakpoints and desired widths */
+@media (min-width: 960px) { /* This corresponds to 'md' in Material-UI */
+    .inputInput {
+        width: 20ch; /* Adjust as needed */
+    }
+}
